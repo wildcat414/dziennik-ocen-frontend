@@ -1,0 +1,18 @@
+<p>Elektroniczny dziennik ocen</p>
+<p>Strona logowania</p>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="login" pInputText> 
+    <label for="float-input">Login</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <p-password [(ngModel)]="password"></p-password>
+    <label for="float-input">Hasło</label>
+</span>
+
+<button pButton type="button" label="Zaloguj się" class="mt-4"></button>
+
+<br>
+
+<button pButton type="button" label="Wróć do strony głównej" class="mt-4" [routerLink]="['/home-page']"></button>
