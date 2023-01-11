@@ -1,0 +1,9 @@
+<p>Przedmioty</p>
+
+<table>
+    <tr><th>ID</th><th>Nazwa</th><th>Autor</th></tr>
+    <tr *ngFor="let subject of subjects"><td>{{ subject.id }}</td><td>{{ subject.name }}</td><td>{{ subject.authorId }}</td></tr>
+</table>
+
+<br>
+<button pButton type="button" label="Wróć do strony głównej" class="mt-4" [routerLink]="['/home-page']"></button>

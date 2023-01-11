@@ -10,8 +10,4 @@ export class HomePageComponent {
 
   constructor(private router: Router) {}
 
-  handleClick($event: MouseEvent) {
-    this.router.navigate(['/user-login']);
-  }
-
 }
