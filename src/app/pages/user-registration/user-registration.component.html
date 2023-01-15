@@ -1,2 +1,28 @@
 <p>Elektroniczny dziennik ocen</p>
 <p>Strona rejestracji</p>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="name" pInputText> 
+    <label for="float-input">Imię</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="surname" pInputText> 
+    <label for="float-input">Nazwisko</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="login" pInputText> 
+    <label for="float-input">Login</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="password" pInputText> 
+    <label for="float-input">Hasło</label>
+</span>
+
+<button pButton type="button" label="Zarejestruj się" class="mt-4" (click)="registerUser()"></button>
+
+<br>
+
+<button pButton type="button" label="Wróć do strony głównej" class="mt-4" [routerLink]="['/home-page']"></button>

@@ -9,6 +9,8 @@ export class ApiConnectionService {
 
   constructor(private http: HttpClient) { }
 
+  currentAccessToken = "";
+
   apiConstPartUrl = 'http://localhost:8080/api/';
   userApiUrl = this.apiConstPartUrl + 'user';
   gradeApiUrl = this.apiConstPartUrl + 'grade';
@@ -16,6 +18,14 @@ export class ApiConnectionService {
 
   getAllUsers() {
     return this.http.get<User>(this.userApiUrl + '/');
+  }
+
+  addNewUser(firstName: string, lastName: string, login: string, password: string) {
+    return this.http.post<any>(this.userApiUrl + '/', { firstName: firstName, lastName: lastName, role: "STUDENT", login: login, passwordHash: password });
+  }
+
+  loginUser(login: string, password: string) {
+    return this.http.post<any>(this.userApiUrl + '/authentication', { login: login, password: password });
   }
 
   getAllSubjects() {

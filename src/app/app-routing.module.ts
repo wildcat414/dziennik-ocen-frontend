@@ -6,11 +6,13 @@ import { ManageSubjectsComponent } from './pages/manage-subjects/manage-subjects
 import { ManageUsersComponent } from './pages/manage-users/manage-users.component';
 import { StudentGradesComponent } from './pages/student-grades/student-grades.component';
 import { UserLoginComponent } from './pages/user-login/user-login.component';
+import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 
 const routes: Routes = [
   { path: 'home-page', component: HomePageComponent },
   { path: '',   redirectTo: '/home-page', pathMatch: 'full' },
   { path: 'user-login', component: UserLoginComponent },
+  { path: 'user-registration', component: UserRegistrationComponent },
   { path: 'manage-users', component: ManageUsersComponent },
   { path: 'manage-subjects', component: ManageSubjectsComponent },
   { path: 'manage-grades', component: ManageGradesComponent },

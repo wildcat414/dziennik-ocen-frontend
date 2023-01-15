@@ -4,6 +4,7 @@ export class User {
     public login?: string;
     public firstName?: number;
     public lastName?: number;
+    public role?: string;
 
     constructor(values: User) {
       Object.assign(this, values);

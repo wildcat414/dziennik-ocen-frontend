@@ -7,11 +7,11 @@
 </span>
 
 <span class="p-float-label mt-4">
-    <p-password [(ngModel)]="password"></p-password>
+    <p-password [(ngModel)]="password" [feedback]="false"></p-password>
     <label for="float-input">Hasło</label>
 </span>
 
-<button pButton type="button" label="Zaloguj się" class="mt-4"></button>
+<button pButton type="button" label="Zaloguj się" class="mt-4" (click)="loginUser()"></button>
 
 <br>
 

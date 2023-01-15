@@ -14,6 +14,7 @@ import { StudentGradesComponent } from './pages/student-grades/student-grades.co
 import { ManageUsersComponent } from './pages/manage-users/manage-users.component';
 import { ManageGradesComponent } from './pages/manage-grades/manage-grades.component';
 import { ManageSubjectsComponent } from './pages/manage-subjects/manage-subjects.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ManageSubjectsComponent } from './pages/manage-subjects/manage-subjects
     ButtonModule,
     InputTextModule,
     PasswordModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
