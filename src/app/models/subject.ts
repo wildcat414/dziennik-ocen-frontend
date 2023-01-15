@@ -1,6 +1,6 @@
 export class Subject {
     
-    public id?: string;
+    public id?: number;
     public name?: string;
     public created?: number;
     public modified?: number;

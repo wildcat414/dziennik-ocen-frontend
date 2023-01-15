@@ -1,1 +1,33 @@
-<p>manage-grades works!</p>
+<p>Oceny</p>
+
+<table>
+    <tr><th>Ocena</th><th>Przedmiot</th><th>Nauczyciel</th><th>Student</th></tr>
+    <tr *ngFor="let grade of grades"><td>{{ grade.value }}</td><td>{{ grade.subjectId }}</td><td>{{ grade.teacherId }}</td><td>{{ grade.studentId }}</td></tr>
+</table>
+
+<br>
+<button pButton type="button" label="Wróć do strony głównej" class="mt-4" [routerLink]="['/home-page']"></button>
+
+<p>Dodaj ocenę</p>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="number" [(ngModel)]="value" pInputText> 
+    <label for="float-input">Ocena</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="number" [(ngModel)]="subjectId" pInputText> 
+    <label for="float-input">Przedmiot</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="number" [(ngModel)]="teacherId" pInputText> 
+    <label for="float-input">Nauczyciel</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="number" [(ngModel)]="studentId" pInputText> 
+    <label for="float-input">Student</label>
+</span>
+
+<button pButton type="button" label="Dodaj ocenę" class="mt-4" (click)="addNewGrade()"></button>

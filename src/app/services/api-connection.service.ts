@@ -32,4 +32,16 @@ export class ApiConnectionService {
     return this.http.get<User>(this.subjectApiUrl + '/');
   }
 
+  addNewSubject(name: string, authorId: number) {
+    return this.http.post<any>(this.subjectApiUrl + '/', { name: name, authorId: authorId });
+  }
+
+  getAllGrades() {
+    return this.http.get<User>(this.gradeApiUrl + '/');
+  }
+
+  addNewGrade(value: number, subjectId: number, teacherId: number, studentId: number) {
+    return this.http.post<any>(this.gradeApiUrl + '/', { value: value, subjectId: subjectId, teacherId: teacherId, studentId: studentId });
+  }
+
 }

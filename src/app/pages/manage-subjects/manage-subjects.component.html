@@ -1,9 +1,23 @@
 <p>Przedmioty</p>
 
 <table>
-    <tr><th>ID</th><th>Nazwa</th><th>Autor</th></tr>
-    <tr *ngFor="let subject of subjects"><td>{{ subject.id }}</td><td>{{ subject.name }}</td><td>{{ subject.authorId }}</td></tr>
+    <tr><th>Nazwa</th><th>Autor</th></tr>
+    <tr *ngFor="let subject of subjects"><td>{{ subject.name }}</td><td>{{ subject.authorId }}</td></tr>
 </table>
 
 <br>
 <button pButton type="button" label="Wróć do strony głównej" class="mt-4" [routerLink]="['/home-page']"></button>
+
+<p>Dodaj przedmiot</p>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="text" [(ngModel)]="name" pInputText> 
+    <label for="float-input">Nazwa</label>
+</span>
+
+<span class="p-float-label mt-4">
+    <input id="float-input" type="number" [(ngModel)]="authorId" pInputText> 
+    <label for="float-input">Autor</label>
+</span>
+
+<button pButton type="button" label="Dodaj ocenę" class="mt-4" (click)="addNewSubject()"></button>
